@@ -1,7 +1,7 @@
 package ru.lester.fpinscala.ch10
 
-import Applicative.monoidApplicative
-import Monad.idMonad
+import Applicative.{Const, monoidApplicative}
+import Monad.{idMonad, optionMonad}
 import ru.lester.fpinscala.ch6.State
 import ru.lester.fpinscala.ch6.State._
 
