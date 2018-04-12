@@ -1,9 +1,9 @@
 package ru.lester.fpinscala.ch10
 
-import Monad.{idMonad, optionMonad}
-import Applicative.{Const, monoidApplicative}
+import Applicative.monoidApplicative
+import Monad.idMonad
 import ru.lester.fpinscala.ch6.State
-import State._
+import ru.lester.fpinscala.ch6.State._
 
 trait Traverse[F[_]] extends Functor[F] with Foldable[F] {
   def traverse[G[_]: Applicative, A, B](fa: F[A])(f: A => G[B]): G[F[B]] = sequence(map(fa)(f))

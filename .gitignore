@@ -1,0 +1,7 @@
+#Ensime
+ensime.sbt
+.ensime
+.ensime_cache/
+#Classes
+project/target/
+target/
